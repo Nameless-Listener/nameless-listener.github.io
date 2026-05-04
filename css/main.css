@@ -1,6 +1,7 @@
 body {
   background: #822828;
   font-family: "Bitter", serif;
+  overflow: hidden;
 }
 
 .nav {
@@ -617,4 +618,45 @@ body {
 .wrapper {
   position: relative;
   padding-top: 60px;
+}
+
+/* Spotify Player Layout */
+.spotify-player {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.spotify-player__tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 7;
+  min-width: 0;
+}
+
+.spotify-player__main {
+  flex: 3;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .spotify-player {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spotify-player__tracks,
+  .spotify-player__main {
+    flex: none;
+    width: 100%;
+  }
+
+  .spotify-player__main iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+  }
 }
