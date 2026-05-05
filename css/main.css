@@ -1,7 +1,6 @@
 body {
   background: #822828;
   font-family: "Bitter", serif;
-  overflow: hidden;
 }
 
 .nav {
@@ -581,6 +580,7 @@ body {
   gap: 30px;
   width: 100%;
   max-width: 1000px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
